@@ -7,7 +7,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = 'C:\Program Files\Tesseract-OCR\\tesseract.exe'
 videolist = {} # dict of names of videos to find frames. video names are the shortened youtube ids
 pid = "PLRD7N-Zrj2DMOLTG7t9E-vJo35BzeTwVG"
-key = "AIzaSyD-sdVOrxbI2Rhoy3gAsieTadYI_sgh6KM" # this is an issue
+key = "" # this is an issue
 fpt = 0 # first page token
 
 jpglist = glob.glob("./*.jpg")
