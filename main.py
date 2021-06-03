@@ -49,7 +49,11 @@ def getPlaylistItems(npt=None):
         success,image = vidcap.read()
         count = 0
         fps = 24 # i dont know the fps but 24 is reasonable
-        increment_seconds = 3 # had it on 6 before, got 90/10 for nier replicant so i halved the time
+        increment_seconds = 3
+
+        # ok so i figured out why its not working -- im stupid and need to process the image beforehand so its not looking at colors
+        # https://stackoverflow.com/questions/59124487/how-to-extract-text-or-numbers-from-images-using-python
+
         while success: # stolen code lol
             if count % (fps * increment_seconds) == 0:
                 cv.imwrite("frame%d.jpg" % count, image)
